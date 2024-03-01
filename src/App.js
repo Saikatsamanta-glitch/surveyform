@@ -9,7 +9,7 @@ function App() {
       <Appbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/survey" element={<Survey />} />
+        <Route path="/survey/:id" element={<Survey />} />
       </Routes>
     </BrowserRouter>
   );

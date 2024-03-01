@@ -1,6 +1,6 @@
 .survey-form{
     width: 850px;
-    height: 400px;
+    height: auto;
     border-radius: 7px;
 }
 #root{
@@ -9,4 +9,20 @@
 .vote{
     height: 40px;
     width: 80px;
+}
+.survey{
+    width: 300px;
+}
+.links{
+    text-decoration: none;
+    color: black;
+}
+.progress{
+    height: 10px !important;
+}
+.success{
+    background: #a1ff75 !important;
+}
+.hidden{
+    display: none;
 }
