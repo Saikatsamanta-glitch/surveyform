@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { survey } from "../Resources/survey";
 import { useParams } from "react-router-dom";
 export default function Survey() {
-  const [optSel, setOptSel] = useState("");
+  const [optSel, setOptSel] = useState({});
   const [showres, setShowres] = useState(false);
   const { id } = useParams();
   const [option, setOptions] = useState({});
@@ -30,19 +30,22 @@ export default function Survey() {
                 className="me-2"
                 id={i}
                 onClick={() => {
-                  setOptSel(v.option);
+                  setOptSel(v);
                 }}
               />
               <label htmlFor={i}>
                 <h5> {v.option}</h5>
-                <div className={`progress bg-primary ${showres?'d-block':'d-none'}`} style={{width:`${v.percentage*2}px`}}></div>
+                <div className={`progress bg-primary ${showres?'d-block':'d-none'}`} style={{width:`${v.percentage+30}px`}}></div>
               </label>
             </div>
           ))}
         </div>
         <div className=" d-flex justify-content-between">
           <div className="info"></div>
-          <button className="vote btn btn-primary" onClick={()=>{setShowres(true)}}>Vote</button>
+          <button className="vote btn btn-primary" onClick={()=>{
+            setShowres(true);
+            setOptions({...option, ...{optSel, percentage: 100}})
+          }}>Vote</button>
         </div>
       </div>
     </div>

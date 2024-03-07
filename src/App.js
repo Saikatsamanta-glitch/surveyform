@@ -6,10 +6,11 @@ import Home from "./Pages/Home";
 function App() {
   return (
     <BrowserRouter>
-      <Appbar />
+      <Appbar name="AI survey's" data="something" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/survey/:id" element={<Survey />} />
+        <Route path="*" element={<h1>404 page not found error</h1>} />
       </Routes>
     </BrowserRouter>
   );

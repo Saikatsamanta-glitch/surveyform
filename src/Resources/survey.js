@@ -5,10 +5,10 @@ export const survey = [
     name: "Programming Language ⭐",
     question:"Which Programming Language do you like ?",
     options: [
-      { option: "Javascript 🔥", percentage: 25 },
-      { option: "Python 🐍", percentage: 25 },
-      { option: "Java 🙏", percentage: 25 },
-      { option: "C /C++ ⭐", percentage: 25 },
+      { option: "Javascript 🔥", percentage: 0 },
+      { option: "Python 🐍", percentage: 0 },
+      { option: "Java 🙏", percentage: 0 },
+      { option: "C /C++ ⭐", percentage: 0 },
     ],
   },
   {
